@@ -19,7 +19,8 @@
 % A pseudo-spectal Navier-Stokes solver for plane parallel Couette flow
 % in wall-normal velocity/ vorticity formulation (Kim,Moin,Moser 1987 - 
 % an example of a spectral mpi DNS has been developed by the Fluid Dynamics 
-% group at UPM/ J.Jimenez et al.)
+% group at UPM/ J.Jimenez et al.), that is capable of simulating turbulent flow
+% dynamics.
 % Differentiations are performed with the pseudo-spectral Chebyshev
 % (Weideman & Reddy 2000) and Fourier (e.g Trefethen 2000) matrices. 
 % Tested with NVIDIA gpus, enabled with igpu flag. Exceeding available GPU memory
