@@ -9,7 +9,5 @@ acquire basic one and two point statistics ('Post_Scripts/'),
 the main executable (NL3D_Couette_gpu_on_RK3.m) 
 and a script to modify the wall-normal resolution of the initial velocity field (Change_wall_normal_res.m).
 
-It is possible to either add the base folder and subfolders to the matlab path, or merge everything in a 
-single folder.
-
-%Functions folder should be added to the path before running the script
+It is possible to either retain the folder structure and add the base folder and subfolders to the matlab path , or merge everything in a 
+single folder and edit the save and load paths accordingly.
