@@ -22,7 +22,8 @@
 % group at UPM/ J.Jimenez et al.)
 % Differentiations are performed with the pseudo-spectral Chebyshev
 % (Weideman & Reddy 2000) and Fourier (e.g Trefethen 2000) matrices. 
-% Tested with NVIDIA gpus, enabled with igpu flag
+% Tested with NVIDIA gpus, enabled with igpu flag. Exceeding available GPU memory
+% will result in crashes.
 % Wherever possible during the time-stepping for-loops have been restructured to 
 % matrix multiplication operations, which utilizes the build-in vectorization of 
 % MATLAB (see also the DNS codes of Vuorinen & Keskinen 2015)
