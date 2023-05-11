@@ -1,8 +1,25 @@
+
+%    A DNS Script of plane parallel Couette flow for MATLAB   
+%    Copyright (C) 2023 Marios-Andreas Nikolaidis
+
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU Affero General Public License as published
+%    by the Free Software Foundation, either version 3 of the License, or
+%    (at your option) any later version.
+
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU Affero General Public License for more details.
+
+%    You should have received a copy of the GNU Affero General Public License
+%    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 % Base DNS code used in Nikolaidis & Ioannou (2022)
 % A pseudo-spectal Navier-Stokes solver for plane parallel Couette flow
 % in wall-normal velocity/ vorticity formulation (Kim,Moin,Moser 1987 - 
 % an example of a spectral mpi DNS is developed by the Fluid Dynamics 
-% group at UPM/ J.Jimenez)
+% group at UPM/ J.Jimenez et al.)
 % Differentiations are performed with the pseudo-spectral Chebyshev
 % (Weideman & Reddy 2000) and Fourier (e.g Trefethen 2000) matrices. 
 % Tested with NVIDIA gpus, enabled with igpu flag
@@ -10,6 +27,10 @@
 % matrix multiplication operations, which utilizes the build-in vectorization of 
 % MATLAB (see also the DNS codes of Vuorinen & Keskinen 2015)
 
+	
+	
+	
+	
 clear all;
 
 global M N Re NX D1x D2x D1z D2z DYF D2F D2 D4 y gamma
