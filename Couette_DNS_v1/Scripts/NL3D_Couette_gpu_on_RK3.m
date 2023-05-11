@@ -312,7 +312,7 @@ for it=it0:NT
 
     if rem(T(it),tplot)==0
     figure(99);
-    plot(UP2,yE,'+',U1,yE,'r')
+    plot(UP3,yE,'+',U1,yE,'r')
     xlabel('U'),ylabel('y')
     figure(105);
     contourf(x,yE,v0(:,:,1),20)
