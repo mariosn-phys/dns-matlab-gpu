@@ -12,7 +12,7 @@ and a script to modify the wall-normal resolution of the initial velocity field 
 It is possible to either retain the folder structure and add the base folder and subfolders to the matlab path , or merge everything in a 
 single folder and edit the save and load paths accordingly.
 
-Main Options
+Options
 ------------
 solv | 1 to calculate and store solver matrices 0 to load stored ones (parameters must be the same!),
 af | multiplies nonlinear term of perturbation-perturbation interactions, 1 for DNS,
@@ -21,7 +21,7 @@ mod | 'c' for Couette flow , 'p' for Poiseuille (testing purposes only), 'z' no 
 tsav | Interval of save states,
 tplot | Interval of diagnostic plots
 
-Main Parameters
+Parameters
 ---------------
 (These have to be the same for the stored precalculated matrices to work!)
 Re | Reynolds number,
