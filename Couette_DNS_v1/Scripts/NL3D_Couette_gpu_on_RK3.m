@@ -55,8 +55,8 @@ global a b
 addpath('../Functions/')
 %addpath('Functions_modal/')
 
-solv=0; % 1 to calculate solver matrices, 0 to load stored precalculated 
-% ones for the same parameters
+solv=0; % 1 to calculate and save solver matrices, 0 to load stored 
+%precalculated ones for the same parameters
 
 af=1;  
 % Nonlinear term modulation, 0 RNL 1 DNS // If used only as DNS 
