@@ -55,6 +55,8 @@ global a b
 addpath('../Functions/')
 %addpath('Functions_modal/')
 
+solv=0; % 1 to calculate solver matrices, 0 to load stored precalculated 
+% ones for the same parameters
 
 af=1;  
 % Nonlinear term modulation, 0 RNL 1 DNS // If used only as DNS 
@@ -157,10 +159,19 @@ P=[0:(MZ/2-1) 0 (1-MZ/2):(-1)];
     Uback=repmat(U1,[1,NX,MZ]);
     gamma=gm*ones(N+2,1);
 
-%----------Build Solvers   
+%----------Build Solvers  
+if solv==1
 [ICvkron1,ICvDvkron1,ICgkron1,ICggkron1,~,~,~,~,S_mf(:,:,1),S_mp(:,:,1),Sol_m(:,:,1),kkm,llm]=solvers(g,1/2);
       
 [ICvkron2,ICvDvkron2,ICgkron2,ICggkron2,~,~,~,~,S_mf(:,:,2),S_mp(:,:,2),Sol_m(:,:,2),~,~]=solvers(g,1);
+
+%save([field_path,'Solvers.mat'],'ICvkron1','ICvkron2','ICvDvkron1','ICvDvkron2','ICgkron1','ICgkron2','ICggkron1','ICggkron2','S_mf','S_mp','Sol_m','kkm','llm','-v7.3')
+
+else
+%----------Load Solvers (only if calculated with same parameteres!!!)
+load([field_path,'Solvers.mat'])
+
+end
 
 % Transfer Variables to GPU 
 if igpu==1
