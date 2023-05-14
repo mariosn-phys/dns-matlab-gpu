@@ -1,4 +1,4 @@
-# couette-dns-matlab-private
+# couette-dns-matlab-gpu
 A MATLAB Script that performs Direct Numerical Simulations (DNSs) of plane Couette turbulence in a plane parallel,
 streamwise and spanwise periodic 3D domain.
 
