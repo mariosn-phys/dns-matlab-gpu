@@ -14,21 +14,21 @@ single folder and edit the save and load paths accordingly.
 
 Main Options
 ------------
-solv | 1 to calculate and store solver matrices 0 to load stored ones (parameters must be the same!)
-af | multiplies nonlinear term of perturbation-perturbation interactions, 1 for DNS.
-igpu | 1 gpu is on 0 gpu is off
-mod | 'c' for Couette flow , 'p' for Poiseuille (testing purposes only), 'z' no flow
-tsav | Interval of save states
+solv | 1 to calculate and store solver matrices 0 to load stored ones (parameters must be the same!),
+af | multiplies nonlinear term of perturbation-perturbation interactions, 1 for DNS,
+igpu | 1 gpu is on 0 gpu is off,
+mod | 'c' for Couette flow , 'p' for Poiseuille (testing purposes only), 'z' no flow,
+tsav | Interval of save states,
 tplot | Interval of diagnostic plots
 
 Main Parameters
 ---------------
 (These have to be the same for the stored precalculated matrices to work!)
-Re | Reynolds number
-dt | time step
-a  | Fundamental Wavenumber in x
-b  | Fundamental Wavenumber in z
-N  | Number of grid points in y (chebyshev)
-NX | Number of grid points in x
+Re | Reynolds number,
+dt | time step,
+a  | Fundamental Wavenumber in x,
+b  | Fundamental Wavenumber in z,
+N  | Number of grid points in y (chebyshev),
+NX | Number of grid points in x,
 MZ | Number of grid points in z
  
