@@ -112,7 +112,7 @@ L=2;
 N=53;
 
 %save([field_path,'parameters_Re',num2str(Re),'_n',num2str(N),'.mat'],'a','b','Re','N','NX','MZ','dt')
-%Parameters for 600 and 2250 can be found in their respective folders '../Data/Re*/
+%Parameters for 600, 2250 and 3000 can be found in their respective folders '../Data/Re*/
 
 % Form Differentiation matrices
 % x matrix (see eg Trefethen 2000)
