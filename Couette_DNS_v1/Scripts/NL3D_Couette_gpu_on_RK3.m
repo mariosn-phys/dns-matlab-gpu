@@ -55,7 +55,7 @@ global a b
 addpath('../Functions/')
 %addpath('Functions_modal/')
 
-solv=0; % 1 to calculate and save solver matrices, 0 to load stored 
+solv=1; % 1 to calculate and save solver matrices, 0 to load stored 
 %precalculated ones for the same parameters
 
 af=1;  
