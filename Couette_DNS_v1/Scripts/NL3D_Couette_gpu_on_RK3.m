@@ -370,7 +370,7 @@ for it=it0:NT
     end
     
     % Code Breakdown check
-    %if max(abs(u0(:)))>=1.2*abs(b2)
+    %if max(abs(u0(:)))>=1.2*abs(max(U1))
     %   display('error')
     %	break
     %end
