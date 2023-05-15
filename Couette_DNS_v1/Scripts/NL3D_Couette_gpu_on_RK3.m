@@ -101,9 +101,6 @@ tplot=100; % plot basic diagnostics
 a=2/1.75;
 b=2/(1.2);
 
-% Other
-%a=2*pi/1.774;
-%b=2*pi/0.884;
 
 %%%% NX,MZ 12,24,48 preferably increment at steps of 12 point, also works
 %%%% with increments of 6 
