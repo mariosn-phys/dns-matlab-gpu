@@ -93,10 +93,15 @@ tsav=1; % interval of saves
 tplot=100; % plot basic diagnostics
 
 % Fundamental wavenumbers
+%Re3000 coarse
 %a=2/4;
 %b=2/2;
+
+%Re600 and Re2250
 a=2/1.75;
 b=2/(1.2);
+
+% Other
 %a=2*pi/1.774;
 %b=2*pi/0.884;
 
