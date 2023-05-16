@@ -28,7 +28,7 @@ Re | Reynolds number,
 dt | time step,
 a  | Fundamental Wavenumber in x,
 b  | Fundamental Wavenumber in z,
-N  | Number of grid points in y (chebyshev),
-NX | Number of grid points in x,
-MZ | Number of grid points in z
+N  | An odd number of grid points in y (chebyshev),
+NX | An even number of grid points in x,
+MZ | An even number of grid points in z
  
