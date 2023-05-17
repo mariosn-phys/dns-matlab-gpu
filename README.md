@@ -26,7 +26,7 @@ tplot | Interval of diagnostic plots (product of integer times dt)
 
 Parameters
 ---------------
-(These have to be the same for the stored precalculated matrices to work correctly!)
+(These have to be the same with the ones used to precalculate the matrice to work correctly!)
 Re | Reynolds number,
 dt | time step,
 a  | Fundamental Wavenumber in x,
