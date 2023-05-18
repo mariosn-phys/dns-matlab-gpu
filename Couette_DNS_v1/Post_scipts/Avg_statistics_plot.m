@@ -1,7 +1,14 @@
 clear all;
 
 %% Set parameters as in the DNS script for the studied flow fields. 
-%% The tsp option  the of save states
+%% The Tstp option dictates the time distane of save states that 
+%% will be loaded.
+    
+%% Plots (1) Energy of the mean profile, the streamwise mean streak and roll,
+%% the streamwise-varying perturbations
+%% (2) Square Root of Energy per (k_x,k_z) wavenumber pair.
+%% Visualizations of flow fields.    
+
 
 global M N Re NX D1x D2x D1z D2z DYF D2F D2 D4 y gamma
 global MZ k l dt xE yE zE A B L dx dz
