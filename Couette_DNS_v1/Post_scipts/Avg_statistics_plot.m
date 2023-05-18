@@ -1,5 +1,8 @@
 clear all;
 
+%% Set parameters as in the DNS script for the studied flow fields. 
+%% The tsp option  the of save states
+
 global M N Re NX D1x D2x D1z D2z DYF D2F D2 D4 y gamma
 global MZ k l dt xE yE zE A B L dx dz
 global b1 b2
@@ -17,6 +20,7 @@ addpath('../Functions/')
 %field_path='../DNS_cheb_RK3_v3/Re600_cheb_modal_uvw_n53_rnl_control3_dconv/'
 
 field_path='../Data/Re600_n53/'  %% save and restart file path
+fname=['R600']; %% suffix of output save files
 
 
 Re=600;%Re=dum(2);
@@ -24,7 +28,8 @@ Re=600;%Re=dum(2);
 mod='c';
 it0=2;
 dt=0.02;
-Ti=0;Tf=6155;Tstp=1;
+Ti=0;Tf=6155;
+Tstp=1; %% Field 
 T=Ti:Tstp:Tf;
 NT=length(T);
 g=dt/(2*Re);
@@ -122,7 +127,6 @@ P=[0:(MZ/2-1) 0 (1-MZ/2):(-1)];
        
     end
     
-   fname=['R600'];
 
 %    EM=[];
 %    EUs=[];
