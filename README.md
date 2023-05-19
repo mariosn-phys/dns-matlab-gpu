@@ -28,7 +28,7 @@ tplot | Interval of diagnostic plots (product of integer times dt)
 
 Parameters
 ---------------
-(These have to be the same with the ones used to precalculate the matrice to work correctly!)
+(When solver matrices are loaded these parameters have to be the same with the ones used to precalculate them in order for the DNS to work correctly!)
 Re | Reynolds number,
 dt | time step,
 a  | Fundamental Wavenumber in x,
