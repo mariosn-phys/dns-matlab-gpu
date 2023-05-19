@@ -171,7 +171,8 @@ display('Calculating Solvers, may take a while')
 [ICvkron1,ICvDvkron1,ICgkron1,ICggkron1,~,~,~,~,S_mf(:,:,1),S_mp(:,:,1),Sol_m(:,:,1),kkm,llm]=solvers(g,1/2);
       
 [ICvkron2,ICvDvkron2,ICgkron2,ICggkron2,~,~,~,~,S_mf(:,:,2),S_mp(:,:,2),Sol_m(:,:,2),~,~]=solvers(g,1);
-
+display('Solvers prepared')
+	
 save([field_path,'Solvers.mat'],'ICvkron1','ICvkron2','ICvDvkron1','ICvDvkron2','ICgkron1','ICgkron2','ICggkron1','ICggkron2','S_mf','S_mp','Sol_m','kkm','llm','-v7.3')
 display('Solvers saved')
 
