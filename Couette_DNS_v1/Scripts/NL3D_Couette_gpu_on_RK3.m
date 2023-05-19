@@ -69,23 +69,25 @@ gpuDevice(1) % Assign to gpudevice
 end
 %%% -------------------------------------
 
-field_path='../Data/Re600_n53/'  %% save and restart file path
-diag_file='diagnostics'; %% save elementary diagnostics
+%%% !!!!!!!!!!!!
+field_path = '../Data/Re600_n53/'  %% save and restart file path
+diag_file  = 'diagnostics'; %% save elementary diagnostics
+%%% !!!!!!!!!!!!
 
 Re=600; % Reynolds number 
 
 % Poiseuille (test) 'p' or Couette 'c'
 mod='c';
 it0=2; % First advance step
-dt=0.02; % Plot and save intervals assume that 1/dt = integer 
-         % choices for dt=[0.025,0.02,0.0125,0.01,0.008] 
+dt=0.02; % Plot and save intervals assume that 1/dt = integer. Some compatible 
+         % choices for dt=[0.025,0.02,0.0125,0.01,0.008,0.00625,0.005] 
 Ti=6148; % Initial Time (should match time on restart file name)
 Tf=6155; % Final Time
 T=Ti:dt:Tf; 
 NT=length(T);
 g=dt/(2*Re); % CN coefficient
 
-%%% File name %% Save file defined at the end of the time-stepping
+%%% File name %% Save file defined at the end of the time-stepping loop
 
 start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),'%04.2f'),'.mat']
 
