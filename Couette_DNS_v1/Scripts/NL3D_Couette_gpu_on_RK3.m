@@ -103,13 +103,17 @@ b=2/(1.2);
 
 
 %%%% NX,MZ 12,24,48 preferably increment at steps of 12 point, also works
-%%%% with increments of 6 
+%%%% with increments of 6. N is odd for centerline point.
+%%%% Boundary points not counted. 
+	
+NX=54;
+MZ=54;
+N=53;
 
-A=2*pi/a;NX=54;dx=A/NX;x=-dx+dx*(1:NX)';xE=[x;A]; 
-B=2*pi/b;MZ=54;dz=B/MZ;z=-dz+dz*(1:MZ)';zE=[z;B];
+A=2*pi/a;dx=A/NX;x=-dx+dx*(1:NX)';xE=[x;A]; 
+B=2*pi/b;dz=B/MZ;z=-dz+dz*(1:MZ)';zE=[z;B];
 L=2;
 
-N=53;
 
 %save([field_path,'parameters_Re',num2str(Re),'_n',num2str(N),'.mat'],'a','b','Re','N','NX','MZ','dt')
 %Parameters for 600, 2250 and 3000 can be found in their respective folders '../Data/Re*/
