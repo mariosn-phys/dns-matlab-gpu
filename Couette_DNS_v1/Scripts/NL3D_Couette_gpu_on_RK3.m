@@ -351,11 +351,11 @@ for it=it0:NT
     xlabel('T');ylabel('Re_{\tau}')
     figure(122);
     contourf(z,yE,squeeze(mean(u0,2)))
-    xlabel('z');ylabel('y')
+    xlabel('z');ylabel('y');title('U(y,z,t)')
     drawnow
     figure(123);
     contourf(z,yE,squeeze(mean(u0-repmat(mean(mean(u0,3),2),[1 NX MZ]),2)))
-    xlabel('z');ylabel('y')
+    xlabel('z');ylabel('y');title('streak')
     drawnow
     end
     
