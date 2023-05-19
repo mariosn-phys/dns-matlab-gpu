@@ -82,7 +82,7 @@ Ti=6148; % Initial Time (should match time on restart file name)
 Tf=6155; % Final Time
 T=Ti:dt:Tf; 
 NT=length(T);
-g=dt/(2*Re);
+g=dt/(2*Re); % CN coefficient
 
 %%% File name %% Save file defined at the end of the time-stepping
 
