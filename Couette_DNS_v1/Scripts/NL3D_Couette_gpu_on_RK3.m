@@ -70,6 +70,7 @@ end
 %%% -------------------------------------
 
 field_path='../Data/Re600_n53/'  %% save and restart file path
+diag_file='diagnostics'; %% save elementary diagnostics
 
 Re=600; % Reynolds number 
 
@@ -87,7 +88,6 @@ g=dt/(2*Re); % CN coefficient
 %%% File name %% Save file defined at the end of the time-stepping
 
 start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),'%04.2f'),'.mat']
-
 
 tsav=1; % interval of saves
 tplot=100; % plot basic diagnostics
@@ -370,7 +370,7 @@ for it=it0:NT
     % Write Fourier coefficients to disk    
     write_to_disk_compact(gather(vi),gather(gi),gather(UP3),gather(WP3),T(it),[field_path,'state_Re',num2str(Re),'_',num2str(T(it),'%04.2f'),'.mat']);
     
-    save([field_path,'diagnostics.mat'],'Efm','CFL','O_bot','O_top','T')
+    save([field_path,diag_file,'.mat'],'Efm','CFL','O_bot','O_top','T')
 
     end
     
