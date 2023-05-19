@@ -16,6 +16,7 @@ single folder and edit the save and load paths accordingly.
 Options
 ------------
 field_path | set path of DNS save state folder,
+diag_file | filename for basic diagnostic quantities (Input, energy, CFL)
 Ti | Starting time  (must match an existing state in the field_path),
 Tf | Time at the last integration step,
 solv | 1 to calculate and store solver matrices 0 to load stored ones (parameters must be the same!),
