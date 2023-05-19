@@ -5,9 +5,9 @@ streamwise and spanwise periodic 3D domain.
 The provided script can be run on CPU or GPU by switching off or on the igpu flag at the beginning.
 
 The folders contain the required functions ('Functions/'), initial fields for Re600, Re2250 and R3000(coarse grid) simulations ('Data/Rex/'), a script to 
-acquire basic one and two point statistics ('Post_Scripts/'), 
-the main executable (NL3D_Couette_gpu_on_RK3.m) 
-and a script to modify the wall-normal resolution of the initial velocity field (Change_wall_normal_res.m). A folder 'Files/' should be created to output
+acquire basic one and two point statistics ('Post_Scripts/Avg_statistics_plot.m'), 
+the main executable (Scripts/NL3D_Couette_gpu_on_RK3.m) 
+and a script to modify the wall-normal resolution of the initial velocity field (Scripts/Change_wall_normal_res.m). A folder 'Files/' should be created to output
 the modified initial fields (or select a different path).
 
 It is possible to either retain the folder structure and add the base folder and subfolders to the matlab path , or merge everything in a 
