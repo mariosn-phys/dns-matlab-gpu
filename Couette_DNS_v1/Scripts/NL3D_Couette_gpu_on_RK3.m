@@ -57,6 +57,9 @@ addpath('../Functions/')
 
 solv=1; % 1 to calculate and save solver matrices, 0 to load stored 
 %precalculated ones for the same parameters
+psolv=0; % 1 enables parallel pool for solver matrices, 0 serial mode
+npc=2; % number of parallel workers in pool for solvers, increases 
+       %memory requirements during calculation
 
 af=1;  
 % Nonlinear term modulation, 0 RNL 1 DNS // If used only as DNS 
@@ -169,17 +172,23 @@ P=[0:(MZ/2-1) 0 (1-MZ/2):(-1)];
 
 %----------Build Solvers  
 if solv==1
-display('Calculating Solvers, may take a while')
-%%% Replace function solvers with parsolvers for faster execution, parfor-loop
-[ICvkron1,ICvDvkron1,ICgkron1,ICggkron1,~,~,~,~,S_mf(:,:,1),S_mp(:,:,1),Sol_m(:,:,1),kkm,llm]=solvers(g,1/2); 
-      
-[ICvkron2,ICvDvkron2,ICgkron2,ICggkron2,~,~,~,~,S_mf(:,:,2),S_mp(:,:,2),Sol_m(:,:,2),~,~]=solvers(g,1);
-display('Solvers prepared')
-	
-save([field_path,'Solvers.mat'],'ICvkron1','ICvkron2','ICvDvkron1','ICvDvkron2','ICgkron1','ICgkron2','ICggkron1','ICggkron2','S_mf','S_mp','Sol_m','kkm','llm','-v7.3')
-display('Solvers saved')
+    if psolv==1    
+    parpool(npc) 
 
-else
+    [ICvkron1,ICvDvkron1,ICgkron1,ICggkron1,~,~,~,~,S_mf(:,:,1),S_mp(:,:,1),Sol_m(:,:,1),kkm,llm]=parsolvers(g,1/2);
+      
+    [ICvkron2,ICvDvkron2,ICgkron2,ICggkron2,~,~,~,~,S_mf(:,:,2),S_mp(:,:,2),Sol_m(:,:,2),~,~]=parsolvers(g,1);
+
+    delete(gcp)
+    else
+  
+    [ICvkron1,ICvDvkron1,ICgkron1,ICggkron1,~,~,~,~,S_mf(:,:,1),S_mp(:,:,1),Sol_m(:,:,1),kkm,llm]=solvers(g,1/2);
+      
+    [ICvkron2,ICvDvkron2,ICgkron2,ICggkron2,~,~,~,~,S_mf(:,:,2),S_mp(:,:,2),Sol_m(:,:,2),~,~]=solvers(g,1);   
+    end
+
+save([field_path,'Solvers.mat'],'ICvkron1','ICvkron2','ICvDvkron1','ICvDvkron2','ICgkron1','ICgkron2','ICggkron1','ICggkron2','S_mf','S_mp','Sol_m','kkm','llm','-v7.3')
+else 
 %----------Load Solvers (only if calculated with same parameteres!!!)
 load([field_path,'Solvers.mat'])
 display('Solvers loaded')
@@ -240,9 +249,9 @@ end
     tdt=[];
 for it=it0:NT
     
-   if rem(it,125)==1
+   %if rem(it,125)==1
    tic;
-   end
+   %end
    
     % u init
     
@@ -364,9 +373,9 @@ for it=it0:NT
     
 
    
-    if rem(it,125)==0
+    %if rem(it,125)==0
     tdt=[tdt toc]; % time step bench
-    end
+    %end
      
     if rem(T(it),tsav)==0
     
