@@ -77,15 +77,15 @@ field_path = '../Data/Re600_n53/'  %% save and restart file path
 diag_file  = 'diagnostics'; %% save elementary diagnostics
 %%% !!!!!!!!!!!!
 
-Re=600; % Reynolds number 
+Re=3000; % Reynolds number 
 
 % Poiseuille (test) 'p' or Couette 'c'
 mod='c';
 it0=2; % First advance step
-dt=0.02; % Plot and save intervals assume that 1/dt = integer. Some compatible 
+dt=0.008; % Plot and save intervals assume that 1/dt = integer. Some compatible 
          % choices for dt=[0.025,0.02,0.0125,0.01,0.008,0.00625,0.005] 
-Ti=6148; % Initial Time (should match time on restart file name)
-Tf=6155; % Final Time
+Ti=5016; % Initial Time (should match time on restart file name)
+Tf=5048; % Final Time
 T=Ti:dt:Tf; 
 NT=length(T);
 g=dt/(2*Re); % CN coefficient
@@ -99,21 +99,21 @@ tplot=100; % plot basic diagnostics
 
 % Fundamental wavenumbers
 %Re3000 coarse
-%a=2/4;
-%b=2/2;
+a=2/2;
+b=2/1;
 
 %Re600 and Re2250
-a=2/1.75;
-b=2/(1.2);
+%a=2/1.75;
+%b=2/(1.2);
 
 
 %%%% NX,MZ 12,24,48 preferably increment at steps of 12 point, also works
 %%%% with increments of 6. N is odd for centerline point.
 %%%% Boundary points not counted. 
 	
-NX=54;
-MZ=54;
-N=53;
+NX=108;
+MZ=108;
+N=71;
 
 A=2*pi/a;dx=A/NX;x=-dx+dx*(1:NX)';xE=[x;A]; 
 B=2*pi/b;dz=B/MZ;z=-dz+dz*(1:MZ)';zE=[z;B];
