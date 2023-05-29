@@ -22,7 +22,7 @@ subplot(221)
 %    [ez,inz]=max(trapz(z,Wyz_t.^2,3));
    
     plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz')
-                title('U(y,z,t)')
+                title('$U(y,z,t)$','Interpreter','latex')
 
     subplot(223)
     
@@ -35,7 +35,7 @@ subplot(221)
     
     
     plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz')
-            title(['x=',num2str(x(inx),'%0.2f')])
+            title(['$u(x=',num2str(x(inx),'%0.2f'),',y,z,t)$'],'Interpreter','latex')
 
     subplot(222)
     
@@ -45,7 +45,7 @@ subplot(221)
     Wyz_t=wn(:,:,inz);
     
     plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','y','yx')
-        title(['z=',num2str(z(inz),'%0.2f')])
+        title(['$w(x,y,z=',num2str(z(inz),'%0.2f'),')$'],'Interpreter','latex')
 
     
         subplot(224)
@@ -57,4 +57,4 @@ subplot(221)
     
     
     plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','z','xz')
-        title(['y=',num2str(yE(iny),'%0.2f')])
+        title(['$v(x,y=',num2str(yE(iny),'%0.2f'),',w)$'],'Interpreter','latex')
