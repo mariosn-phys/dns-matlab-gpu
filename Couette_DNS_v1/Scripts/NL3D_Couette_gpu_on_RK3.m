@@ -1,5 +1,5 @@
 
-%    A DNS Script of plane parallel Couette flow for MATLAB   
+%    A DNS Script of plane parallel flows (Couette/Poiseuille) for MATLAB   
 %    Copyright (C) 2023 Marios-Andreas Nikolaidis
 
 %    This program is free software: you can redistribute it and/or modify
