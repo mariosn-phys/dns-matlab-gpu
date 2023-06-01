@@ -73,7 +73,7 @@ end
 %%% -------------------------------------
 
 %%% !!!!!!!!!!!!
-field_path = '../Data/Re600_n53/'  %% save and restart file path
+field_path = '../Data/Re3250_n71_coarse/'  %% save and restart file path
 diag_file  = 'diagnostics'; %% save elementary diagnostics
 %%% !!!!!!!!!!!!
 
