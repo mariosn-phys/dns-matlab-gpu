@@ -28,13 +28,13 @@ and subfolders to the matlab path , or merge everything in a single folder and e
 Options
 ------------
 field_path | set path of DNS save state folder,
-fmt | format of time in filenames, default is '%04.2f'
-diag_file | filename for basic diagnostic quantities (Input, energy, CFL)
+fmt | format of time in filenames, default is '%04.2f',
+diag_file | filename for basic diagnostic quantities (Input, energy, CFL),
 Ti | Starting time  (must match an existing state in the field_path),
 Tf | Time at the last integration step,
 solv | 1 to calculate and store solver matrices 0 to load stored ones (parameters must be the same!),
-psolv | 1 enables parallel pool to build solvers, 0 for serial mode
-npc | number of cores to utilize in the parallel pool
+psolv | 1 enables parallel pool to build solvers, 0 for serial mode,
+npc | number of cores to utilize in the parallel pool,
 af | multiplies nonlinear term of perturbation-perturbation interactions in the perturbation equation, 1 for DNS,
 igpu | 1 gpu is on 0 gpu is off,
 modf | 'c' for Couette flow , 'p' for Poiseuille constant pressure, 'm' for Poiseuille constant mass, 'z' no flow,
@@ -48,7 +48,7 @@ Re | Reynolds number,
 dt | time step,
 a  | Fundamental Wavenumber in x,
 b  | Fundamental Wavenumber in z,
-N  | An odd number of grid points in y (chebyshev),
+N  | An odd number of grid points in y (Chebyshev),
 NX | An even number of grid points in x,
 MZ | An even number of grid points in z
  
