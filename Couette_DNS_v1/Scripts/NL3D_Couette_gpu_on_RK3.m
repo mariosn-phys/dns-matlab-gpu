@@ -73,7 +73,7 @@ end
 %%% -------------------------------------
 
 %%% !!!!!!!!!!!!
-field_path = '../Data/Re600_n53/'  %% save and restart file path
+field_path = '../Data/Re3000_n71_coarse/'  %% save and restart file path
 diag_file  = 'diagnostics'; %% save elementary diagnostics
 %%% !!!!!!!!!!!!
 
@@ -98,7 +98,7 @@ tsav=1; % interval of saves
 tplot=100; % plot basic diagnostics
 
 % Fundamental wavenumbers
-%Re3000 coarse
+%Re3000 and Re3250
 a=2/2;
 b=2/1;
 
