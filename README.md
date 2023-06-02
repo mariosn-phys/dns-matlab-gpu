@@ -1,12 +1,32 @@
-# couette-dns-matlab-gpu
+# dns-matlab-gpu
 A MATLAB Script that performs Direct Numerical Simulations (DNSs) of plane Couette turbulence in a plane parallel,
 streamwise and spanwise periodic 3D domain.
 
-The provided script can be run on CPU or GPU by switching off or on the igpu flag at the beginning.
+The main executable files are in the folder 'Scripts/':
+The NL3D_Couette_gpu_on_RK3.m script version supports simulations of Couette and Poiseuille ( constant pressure gradient)
+Set up with a coarse grid Couette flow case at R=3000
+
+The NL3D_Poiseuille_gpu_on_RK3.m script version supports simulations of Couette and Poiseuille ( constant pressure gradient or mass flux)
+Set up with a coarse grid Poiseuille flow case at R=3250
+
+The provided scripts run on CPU or GPU by switching off or on the igpu flag at the beginning.
+
+Initial fields for different cases are provided in the folders found in 'Data/'. The parameters of these simulations can be found in the 'parameters.mat' file
+in each folder. 
+
+Different grid resolution in x and z is automatically adjusted when loading a file. To modify the wall-normal resolution of the initial velocity field, 
+an interpolation script is provided (Scripts/Change_wall_normal_res.m). A folder 'Files/' should be created to output the modified initial fields 
+(or select a different path).
+
+Basic one- and two- point statistics can be acquired with the 'Avg_statistics_plot.m' script found in the 'Post_Scripts/' folder. This script calls 
+a function for plotting slices of the velocity field. It is possible to calculates the spectra of wall-normal planes by commenting the appropriate 
+section in the 'measure_plot_ener.m' script.
+
+The required functions to run these scripts are found in the folder ('Functions/') 
+
 
 The folders contain the required functions ('Functions/'), initial fields for Re600, Re2250 and R3000(coarse grid) simulations ('Data/Rex/'), a script to 
 acquire basic one and two point statistics ('Post_Scripts/Avg_statistics_plot.m'), 
-the main executable (Scripts/NL3D_Couette_gpu_on_RK3.m) 
 and a script to modify the wall-normal resolution of the initial velocity field (Scripts/Change_wall_normal_res.m). A folder 'Files/' should be created to output
 the modified initial fields (or select a different path).
 
