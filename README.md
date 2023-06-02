@@ -9,7 +9,7 @@ Set up with a coarse grid Couette flow case at R=3000.
 The NL3D_Poiseuille_gpu_on_RK3.m script version supports simulations of Couette and Poiseuille ( constant pressure gradient or mass flux)
 Set up with a coarse grid Poiseuille flow case at R=3250.
 
-The provided scripts run on CPU or GPU by switching off or on the igpu flag at the beginning.
+Both scripts run on CPU or GPU by switching off or on the igpu flag at the beginning.
 
 Initial fields for different cases are provided in the folders found in 'Data/'. The parameters of these simulations can be found in the 'parameters.mat' file
 in each folder. 
