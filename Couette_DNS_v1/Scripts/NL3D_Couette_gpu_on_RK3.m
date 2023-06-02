@@ -80,7 +80,7 @@ diag_file  = 'diagnostics'; %% save elementary diagnostics
 Re=3000; % Reynolds number 
 
 % Poiseuille (test) 'p' or Couette 'c'
-mod='c';
+modf='c';
 it0=2; % First advance step
 dt=0.008; % Plot and save intervals assume that 1/dt = integer. Some compatible 
          % choices for dt=[0.025,0.02,0.0125,0.01,0.008,0.00625,0.005] 
@@ -158,11 +158,11 @@ M=[0:(NX/2-1) 0 (1-NX/2):(-1)];
 P=[0:(MZ/2-1) 0 (1-MZ/2):(-1)];
     l=2*pi*P/B;  
   
-    if mod=='p'
-    U1=(1-yE.^2);gm=-2/Re; %Poiseuille (constant pressure) 
-    elseif mod=='c'
+    if modf=='p'
+    U1=4/3*(1-yE.^2);gm=-8/3/Re; %Poiseuille (constant pressure) 
+    elseif modf=='c'
     U1=yE;gm=0; %Couette
-    elseif mod=='z'
+    elseif modf=='z'
     U1=yE*0;gm=-2/Re*0;    
     end
     b1=U1(1);b2=U1(end);
@@ -359,7 +359,11 @@ for it=it0:NT
     plot(T(1:it),CFL(1:it))
     xlabel('T');ylabel('CFL')
     figure(113);clf
+    if modf='c'
     plot(T(1:it),sqrt(Re*(O_bot(1:it)+O_top(1:it))/2))
+    elseif modf='p'
+    plot(T(1:it),sqrt(Re*(O_bot(1:it)-O_top(1:it))/2))
+    end
     xlabel('T');ylabel('Re_{\tau}')
     figure(122);
     contourf(z,yE,squeeze(mean(u0,2)))
