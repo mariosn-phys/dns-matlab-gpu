@@ -16,6 +16,7 @@ single folder and edit the save and load paths accordingly.
 Options
 ------------
 field_path | set path of DNS save state folder,
+fmt | format of time in filenames, default is '%04.2f'
 diag_file | filename for basic diagnostic quantities (Input, energy, CFL)
 Ti | Starting time  (must match an existing state in the field_path),
 Tf | Time at the last integration step,
@@ -24,7 +25,7 @@ psolv | 1 enables parallel pool to build solvers, 0 for serial mode
 npc | number of cores to utilize in the parallel pool
 af | multiplies nonlinear term of perturbation-perturbation interactions in the perturbation equation, 1 for DNS,
 igpu | 1 gpu is on 0 gpu is off,
-mod | 'c' for Couette flow , 'p' for Poiseuille (testing purposes only), 'z' no flow,
+modf | 'c' for Couette flow , 'p' for Poiseuille constant pressure, 'm' for Poiseuille constant mass, 'z' no flow,
 tsav | Interval of save states (product of integer times dt),
 tplot | Interval of diagnostic plots (product of integer times dt)
 
