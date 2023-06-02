@@ -95,7 +95,7 @@ fmt='%04.2f'; %% Load and save format
 start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),fmt),'.mat']
 
 tsav=1; % interval of saves
-tplot=100; % plot basic diagnostics
+tplot=10; % plot basic diagnostics
 
 % Fundamental wavenumbers
 %Re3000 coarse
