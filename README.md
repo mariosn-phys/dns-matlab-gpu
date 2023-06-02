@@ -4,10 +4,10 @@ streamwise and spanwise periodic 3D domain.
 
 The main executable files are in the folder 'Scripts/':
 The NL3D_Couette_gpu_on_RK3.m script version supports simulations of Couette and Poiseuille ( constant pressure gradient)
-Set up with a coarse grid Couette flow case at R=3000
+Set up with a coarse grid Couette flow case at R=3000.
 
 The NL3D_Poiseuille_gpu_on_RK3.m script version supports simulations of Couette and Poiseuille ( constant pressure gradient or mass flux)
-Set up with a coarse grid Poiseuille flow case at R=3250
+Set up with a coarse grid Poiseuille flow case at R=3250.
 
 The provided scripts run on CPU or GPU by switching off or on the igpu flag at the beginning.
 
