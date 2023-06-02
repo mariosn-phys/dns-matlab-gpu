@@ -22,16 +22,8 @@ Basic one- and two- point statistics can be acquired with the 'Avg_statistics_pl
 a function for plotting slices of the velocity field. It is possible to calculates the spectra of wall-normal planes by commenting the appropriate 
 section in the 'measure_plot_ener.m' script.
 
-The required functions to run these scripts are found in the folder ('Functions/') 
-
-
-The folders contain the required functions ('Functions/'), initial fields for Re600, Re2250 and R3000(coarse grid) simulations ('Data/Rex/'), a script to 
-acquire basic one and two point statistics ('Post_Scripts/Avg_statistics_plot.m'), 
-and a script to modify the wall-normal resolution of the initial velocity field (Scripts/Change_wall_normal_res.m). A folder 'Files/' should be created to output
-the modified initial fields (or select a different path).
-
-It is possible to either retain the folder structure and add the base folder and subfolders to the matlab path , or merge everything in a 
-single folder and edit the save and load paths accordingly.
+The required functions to run these scripts are found in the folder ('Functions/'). It is possible to either retain the folder structure and add the base folder 
+and subfolders to the matlab path , or merge everything in a single folder and edit the save and load paths accordingly.
 
 Options
 ------------
