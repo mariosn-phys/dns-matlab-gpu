@@ -91,8 +91,8 @@ NT=length(T);
 g=dt/(2*Re); % CN coefficient
 
 %%% File name %% Save file defined at the end of the time-stepping loop
-
-start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),'%04.2f'),'.mat']
+fmt='%04.2f'; %% Load and save format
+start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),fmt),'.mat']
 
 tsav=1; % interval of saves
 tplot=100; % plot basic diagnostics
@@ -389,7 +389,7 @@ for it=it0:NT
     if rem(T(it),tsav)==0
     
     % Write Fourier coefficients to disk    
-    write_to_disk_compact(gather(vi),gather(gi),gather(UP3),gather(WP3),T(it),[field_path,'state_Re',num2str(Re),'_',num2str(T(it),'%04.2f'),'.mat']);
+    write_to_disk_compact(gather(vi),gather(gi),gather(UP3),gather(WP3),T(it),[field_path,'state_Re',num2str(Re),'_',num2str(T(it),fmt),'.mat']);
     
     save([field_path,diag_file,'.mat'],'Efm','CFL','O_bot','O_top','tdt','T')
 
