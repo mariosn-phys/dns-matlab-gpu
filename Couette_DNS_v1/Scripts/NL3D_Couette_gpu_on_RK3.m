@@ -91,7 +91,7 @@ NT=length(T);
 g=dt/(2*Re); % CN coefficient
 
 %%% File name %% Save file defined at the end of the time-stepping loop
-fmt='%04.2f'; % Load and save format
+fmt='%04.2f'; % Load and save time label format
 start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),fmt),'.mat']
 
 tsav=1; % interval of saves
