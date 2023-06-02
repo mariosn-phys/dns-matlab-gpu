@@ -95,14 +95,14 @@ fmt='%04.2f'; %% Load and save format
 start_file=[field_path,'state_Re',num2str(Re),'_',num2str(T(1),fmt),'.mat']
 
 tsav=1; % interval of saves
-tplot=10; % plot basic diagnostics
+tplot=5; % plot basic diagnostics
 
 % Fundamental wavenumbers
-%Re3000 coarse
+%Re3000 Re3250
 a=2/2;
 b=2/1;
 
-%Re600 and Re2250
+%Re600 Re2250
 %a=2/1.75;
 %b=2/(1.2);
 
@@ -121,7 +121,7 @@ L=2;
 
 
 %save([field_path,'parameters_Re',num2str(Re),'_n',num2str(N),'.mat'],'a','b','Re','N','NX','MZ','dt')
-%Parameters for 600, 2250 and 3000 can be found in their respective folders '../Data/Re*/
+%Parameters for 600, 2250, 3000 and 3250 can be found in their respective folders '../Data/Re*/
 
 % Form Differentiation matrices
 % x matrix (see eg Trefethen 2000)
