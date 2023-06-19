@@ -1,7 +1,7 @@
 clear all;
 
 %% Set parameters as in the DNS script for the studied flow fields. 
-%% The Tstp option dictates the time distane of save states that 
+%% The Tstp option dictates the time interval of save states that 
 %% will be loaded.
     
 %% Plots (1) Energy of the mean profile, the streamwise mean streak and roll,
