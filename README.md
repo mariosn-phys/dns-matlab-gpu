@@ -1,5 +1,5 @@
 # dns-matlab-gpu
-A MATLAB Script that performs Direct Numerical Simulations (DNSs) of plane Couette turbulence in a plane parallel,
+A MATLAB Script that performs Direct Numerical Simulations (DNSs) of Couette or Poiseuille flow turbulence in a plane parallel,
 streamwise and spanwise periodic 3D domain.
 
 The main executable files are in the folder 'Scripts/':
@@ -28,7 +28,7 @@ and subfolders to the matlab path , or merge everything in a single folder and e
 Options
 ------------
 field_path | set path of DNS save state folder,
-fmt | format of time in filenames, default is '%04.2f',
+fmt | format of time in filenames, default is '%04.2f', this setting allows times from 0.00 to 9999.99,
 diag_file | filename for basic diagnostic quantities (Input, energy, CFL),
 Ti | Starting time  (must match an existing state in the field_path),
 Tf | Time at the last integration step,
