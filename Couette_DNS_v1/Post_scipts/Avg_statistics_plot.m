@@ -13,7 +13,6 @@ clear all;
 global M N Re NX D1x D2x D1z D2z DYF D2F D2 D4 y gamma
 global MZ k l dt xE yE zE A B L dx dz
 global b1 b2
-global kLyap NLyap
 global a b kkm llm kkmm llmm DYkron DYkronm
 global x yE z
 global xx_yx yy_yx yy_yz zz_yz xx_xz zz_xz
@@ -23,9 +22,6 @@ global xx_yx yy_yx yy_yz zz_yz xx_xz zz_xz
 
 addpath('../Functions/')
 %addpath('Functions_metrics/')
-%addpath('Functions_modal/')
-%field_path='../DNS_cheb_RK3_v3/Re600_cheb_modal_uvw_n53_rnl_control3_dconv/'
-
 field_path='../Data/Re600_n53/'  %% save and restart file path
 fname=['R600']; %% suffix of output save files
 
