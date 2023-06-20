@@ -19,7 +19,7 @@ addpath('../Functions/')
 field_path='../Data/Re3250_n81/'  %% save and restart file path
 fname=['P3250T']; %% Save file name
 fmt='%04.2f'; %% Format of time on filenames
-cspec=1; % Calculate 2d spectra 
+cspec=0; % Calculate 2d spectra 
 % Poiseuille 'm' 'p' or Couette 'c'
 modf='m';
 
@@ -135,7 +135,9 @@ P=[0:(MZ/2-1) 0 (1-MZ/2):(-1)];
 
 
 save([field_path,'statistics_uu_',fname,'.mat'],'upvp','UP','upup','vpvp','wpwp','Inp','Dissip','Ret','yE','T','-v7.3')
+if cspec==1
 save([field_path,'statistics_sp_',fname,'.mat'],'Euu','Evv','Eww','Exx','Egg','Ezz','k','l','T')
+end
 
 %  save([field_path,'Umean_',fname,'.mat'],'Ust','Vst','Wst','Oxt','z','yE')
 %  save([field_path,'statistics_spy_',fname,'.mat'],'Euu_y','Evv_y','Eww_y','Exx_y','Egg_y','Ezz_y','k','l','yE')
