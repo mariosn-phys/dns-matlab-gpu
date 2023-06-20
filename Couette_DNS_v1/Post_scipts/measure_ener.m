@@ -1,14 +1,3 @@
-
-% %    Ret=sqrt(Re*Inp)
-%     
-% %    plot_snapshot(u0)
-%     Efm(iter)=Ener(u0-Uback,v0,w0);
-% %    Efp(iter,fin)=Ener(u0-repmat(mean(u0,2),[1,NX,1]),v0-repmat(mean(v0,2),[1,NX,1]),w0-repmat(mean(w0,2),[1,NX,1]));
-
-
-
-    
-
 %     
      O_bot(iter)=DYF(1,:)*UP1;
      O_top(iter)=DYF(end,:)*UP1;
