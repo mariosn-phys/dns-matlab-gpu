@@ -28,17 +28,17 @@ Ti=4600;Tf=4630;Tstp=1;
 T=Ti:Tstp:Tf;
 NT=length(T);
 
-%NX=156;
-%MZ=156;
+NX=144;
+MZ=144;
 N=81;
 
-load([field_path,'parameters_Re',num2str(Re),'_n',num2str(N),'.mat'],'a','b','Re','N','NX','MZ')
+%load([field_path,'parameters_Re',num2str(Re),'_n',num2str(N),'.mat'],'a','b','Re','N','NX','MZ')
 
 % a=2/(1.75);%a=2*pi/1.774;
 % b=2/(1.2);%b=2*pi/0.884;
 % 
-% a=2/4;
-% b=2/2;
+a=2/2;
+b=2/1;
 
 %%%% NX,MZ 12,24,48, +12 or +6
 
