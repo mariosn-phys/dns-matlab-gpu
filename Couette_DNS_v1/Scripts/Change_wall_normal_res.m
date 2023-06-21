@@ -12,7 +12,7 @@ resetT=0; % Set runtime of new file to 0
 %Initial field name
 field_path='../Data/Re600_n53/';Re=600;T=6148;
 old_file=['state_Re',num2str(Re),'_',num2str(T(1),'%04.2f')];
-save_new_path='../Files/';
+save_new_path='../Data/';
 
 
 load([field_path,old_file,'.mat'],'vhat','ghat','UP','WP','runtime')
