@@ -3,7 +3,7 @@ clear
 
 addpath('../Functions/')
 
-Nn=53; % Number of grid points in the wall-normal for the new flow field
+Nn=33; % Number of grid points in the wall-normal for the new flow field
 % Fourier modes are adjusted when the flow field is loaded in the DNS code 
 [~,yn]=cheb(Nn+1);yn=-yn;
 
