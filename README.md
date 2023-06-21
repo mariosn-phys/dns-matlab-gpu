@@ -17,9 +17,9 @@ in each folder.
 Different grid resolution in x and z is automatically adjusted when loading a file. To modify the wall-normal resolution of the initial velocity field, 
 an interpolation script is provided (Scripts/Change_wall_normal_res.m). The modified initial fields are saved in the folder 'Data/'.
 
-Basic one- and two- point statistics can be acquired with the 'Avg_statistics_plot.m' script found in the 'Post_Scripts/' folder. This script calls 
+Basic one-point statistics can be acquired with the 'Avg_statistics_plot.m' script found in the 'Post_Scripts/' folder. This script calls 
 a function for plotting slices of the velocity field. It is possible to calculates the spectra of wall-normal planes by commenting the appropriate 
-section in the 'measure_plot_ener.m' script.
+section in the 'measure_ener.m' script.
 
 The required functions to run these scripts are found in the folder ('Functions/'). It is possible to either retain the folder structure and add the base folder 
 and subfolders to the matlab path , or merge everything in a single folder and edit the save and load paths accordingly.
