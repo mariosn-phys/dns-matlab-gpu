@@ -1,6 +1,7 @@
 
 %    A DNS Script of plane parallel flows (Couette/Poiseuille) for MATLAB   
 %    Copyright (C) 2023 Marios-Andreas Nikolaidis
+%    Developed during the author's thesis at the University of Athens
 
 %    This program is free software: you can redistribute it and/or modify
 %    it under the terms of the GNU Affero General Public License as published
