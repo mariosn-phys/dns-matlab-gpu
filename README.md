@@ -1,4 +1,4 @@
-# dns-matlab-gpu
+# UoA-dns-matlab-gpu
 A MATLAB Script that performs Direct Numerical Simulations (DNSs) of Couette or Poiseuille flow turbulence in a plane parallel,
 streamwise and spanwise periodic 3D domain.
 
