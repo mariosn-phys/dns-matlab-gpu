@@ -82,10 +82,10 @@ Re=3250; % Reynolds number
 % Couette 'c' or Poiseuille (test) 'p'(constant pressure) 'm'(constant mass flux)
 modf='m';
 it0=2; % First advance step
-dt=0.00625; % Plot and save intervals assume that 1/dt = integer. Some compatible 
+dt=0.008; % Plot and save intervals assume that 1/dt = integer. Some compatible 
          % choices for dt=[0.025,0.02,0.0125,0.01,0.008,0.00625,0.005] 
-Ti=3000; % Initial Time (should match time on restart file name)
-Tf=4000; % Final Time
+Ti=1300; % Initial Time (should match time on restart file name)
+Tf=1500; % Final Time
 T=Ti:dt:Tf; 
 NT=length(T);
 g=dt/(2*Re); % CN coefficient
