@@ -3,7 +3,6 @@ clear all;
 global M N Re NX D1x D2x D1z D2z DYF D2F D2 D4 y gamma
 global MZ k l dt xE yE zE A B L dx dz
 global b1 b2
-global kLyap NLyap
 global a b kkm llm kkmm llmm DYkron DYkronm
 global x yE z
 global xx_yx yy_yx yy_yz zz_yz xx_xz zz_xz
