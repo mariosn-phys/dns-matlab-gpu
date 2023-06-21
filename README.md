@@ -51,4 +51,4 @@ N  | An odd number of grid points in y (Chebyshev),
 NX | An even number of grid points in x,
 MZ | An even number of grid points in z
  
-(Sets of parameters can be found in the initial field folders 'Data/Rex')
+(Sets of parameters can be found in the initial field folders 'Data/ReX')
