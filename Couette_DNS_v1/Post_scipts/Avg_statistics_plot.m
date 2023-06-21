@@ -11,8 +11,6 @@ global xx_yx yy_yx yy_yz zz_yz xx_xz zz_xz
 
 
 addpath('../Functions/')
-%addpath('Functions_metrics/')
-%addpath('Functions_modal/')
 
 %%%% Options
 field_path='../Data/Re3250_n81/'  %% save and restart file path
