@@ -15,8 +15,7 @@ Initial fields for different cases are provided in the folders found in 'Data/'.
 in each folder. 
 
 Different grid resolution in x and z is automatically adjusted when loading a file. To modify the wall-normal resolution of the initial velocity field, 
-an interpolation script is provided (Scripts/Change_wall_normal_res.m). A folder 'Files/' should be created to output the modified initial fields 
-(or select a different path).
+an interpolation script is provided (Scripts/Change_wall_normal_res.m). The modified initial fields are saved in the folder 'Data/'.
 
 Basic one- and two- point statistics can be acquired with the 'Avg_statistics_plot.m' script found in the 'Post_Scripts/' folder. This script calls 
 a function for plotting slices of the velocity field. It is possible to calculates the spectra of wall-normal planes by commenting the appropriate 
