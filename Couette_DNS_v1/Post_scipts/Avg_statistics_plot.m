@@ -16,7 +16,7 @@ addpath('../Functions/')
 field_path='../Data/Re3250_n81/'  %% save and restart file path
 fname=['P3250T']; %% Save file name
 fmt='%04.2f'; %% Format of time on filenames
-cspec=0; % Calculate 2d spectra 
+cspec=0; % Calculate 2d spectra integrated over y
 % Poiseuille 'm' 'p' or Couette 'c'
 modf='m';
 
