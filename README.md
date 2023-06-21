@@ -28,7 +28,7 @@ and subfolders to the matlab path , or merge everything in a single folder and e
 Options
 ------------
 field_path | set path of DNS save state folder,
-fmt | format of time in filenames, default is '%04.2f', this setting allows times from 0.00 to 9999.99,
+fmt | format of time in filenames, default is '%04.2f', this setting allows times from 0000.00 to 9999.99,
 diag_file | filename for basic diagnostic quantities (Input, energy, CFL),
 Ti | Starting time  (must match an existing state in the field_path),
 Tf | Time at the last integration step,
