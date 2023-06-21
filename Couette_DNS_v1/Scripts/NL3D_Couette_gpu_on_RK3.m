@@ -84,8 +84,8 @@ modf='c';
 it0=2; % First advance step
 dt=0.008; % Plot and save intervals assume that 1/dt = integer. Some compatible 
          % choices for dt=[0.025,0.02,0.0125,0.01,0.008,0.00625,0.005] 
-Ti=5016; % Initial Time (should match time on restart file name)
-Tf=5048; % Final Time
+Ti=5499; % Initial Time (should match time on restart file name)
+Tf=5700; % Final Time
 T=Ti:dt:Tf; 
 NT=length(T);
 g=dt/(2*Re); % CN coefficient
