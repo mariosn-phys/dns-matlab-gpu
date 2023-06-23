@@ -59,7 +59,6 @@ L=2;
     DYF=cheb(N+1);DYF=flip(flip(DYF,1),2);
     DY=DYF(2:end-1,2:end-1);
     DYkron=kron(speye((NX/3)*(2*MZ/3-1)),DY);
-    DYkronm=kron(speye(sum(NLyap/2)*(2*MZ/3-1)),DY);
     
     
     D2F=DYF^2;
