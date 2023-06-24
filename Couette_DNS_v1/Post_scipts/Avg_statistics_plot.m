@@ -21,13 +21,13 @@ cspec=0; % Calculate 2d spectra integrated over y
 modf='m';
 
 Re=3250;%Re=dum(2);
-Ti=4600;Tf=4630;Tstp=1;
+Ti=1300;Tf=1500;Tstp=1;
 T=Ti:Tstp:Tf;
 NT=length(T);
 
-NX=144;
-MZ=144;
-N=81;
+NX=108;
+MZ=108;
+N=71;
 
 %load([field_path,'parameters_Re',num2str(Re),'_n',num2str(N),'.mat'],'a','b','Re','N','NX','MZ')
 
