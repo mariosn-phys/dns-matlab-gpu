@@ -1,4 +1,4 @@
-function plot_mode_2(kfig,un,vn,wn,gn,inx,iny,inz)
+function plot_mode_2(kfig,un,vn,wn,gn,inx,iny,inz,arr)
 % select figure+1 and planes to plot (inx,iny,inz)
 % (1) instantaneous streamwise mean (2) U velocity, plane in x
 % (3) W velocity, plane in z (4) V velocity, plane in y
@@ -21,7 +21,7 @@ subplot(221)
 
 %    [ez,inz]=max(trapz(z,Wyz_t.^2,3));
    
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz')
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz',arr)
                 title('$U(y,z,t)$','Interpreter','latex')
 
     subplot(223)
@@ -34,7 +34,7 @@ subplot(221)
     Wyz_t=wn(:,inx,:);
     
     
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz')
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz',arr)
             title(['$u(x=',num2str(x(inx),'%0.2f'),',y,z,t)$'],'Interpreter','latex')
 
     subplot(222)
@@ -44,7 +44,7 @@ subplot(221)
     Vyz_t=vn(:,:,inz);
     Wyz_t=wn(:,:,inz);
     
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','y','yx')
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','y','yx',arr)
         title(['$w(x,y,z=',num2str(z(inz),'%0.2f'),')$'],'Interpreter','latex')
 
     
@@ -56,5 +56,5 @@ subplot(221)
     Wyz_t=wn(iny,:,:);
     
     
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','z','xz')
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','z','xz',arr)
         title(['$v(x,y=',num2str(yE(iny),'%0.2f'),',w)$'],'Interpreter','latex')

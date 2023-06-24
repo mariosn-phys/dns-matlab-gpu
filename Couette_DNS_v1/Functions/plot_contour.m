@@ -1,4 +1,4 @@
-function plot_contour(u2,v2,w2,xlb,ylb,ori)
+function plot_contour(u2,v2,w2,xlb,ylb,ori,arr)
 % contour cross-sections of the velocity normal
 % to the selected ori - plane
 
@@ -17,7 +17,9 @@ if ori=='yz'
  %   figure(2);clf;
     hold on
     contourf(z,yE,Uyz_t);colorbar;
+    if arr=='on'
     quiver(zz_yz,yy_yz,Wyz_t',Vyz_t',1.5)
+    end
     xlabel(xlb);ylabel(ylb);
     xlim([0 z(end)])
     hold off
@@ -32,7 +34,9 @@ elseif ori=='yx'
  %   figure(2);clf;
     hold on
     contourf(x,yE,Wyz_t);colorbar;
+    if arr=='on'
     quiver(xx_yx,yy_yx,Uyz_t,Vyz_t,1.5)
+    end
     xlabel(xlb);ylabel(ylb);
     xlim([0 x(end)])
     hold off
@@ -47,7 +51,9 @@ elseif ori=='xz'
  %   figure(2);clf;
     hold on
     contourf(x,z,Vyz_t');colorbar;
+    if arr=='on'
     quiver(xx_xz,zz_xz,Uyz_t,Wyz_t,1.5)
+    end
     xlabel(xlb);ylabel(ylb);
     xlim([0 x(end)]);ylim([0 z(end)])
     hold off  
