@@ -360,9 +360,9 @@ for it=it0:NT
     plot(T(1:it),CFL(1:it))
     xlabel('T');ylabel('CFL')
     figure(113);clf
-    	if modf='c'
+    	if modf=='c'
     	plot(T(1:it),sqrt(Re*(O_bot(1:it)+O_top(1:it))/2))
-    	elseif modf='p'
+    	elseif modf=='p'
     	plot(T(1:it),sqrt(Re*(O_bot(1:it)-O_top(1:it))/2))
 	end
     xlabel('T');ylabel('Re_{\tau}')
