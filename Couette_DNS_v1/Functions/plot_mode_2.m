@@ -2,7 +2,8 @@ function plot_mode_2(kfig,un,vn,wn,gn,inx,iny,inz,arr)
 % select figure+1 and planes to plot (inx,iny,inz)
 % (1) instantaneous streamwise mean (2) U velocity, plane in x
 % (3) W velocity, plane in z (4) V velocity, plane in y
-
+% arr = 'on' to plot the velocity vectors on each plane,
+% else set to 'no'
 
 global yE z x
 
