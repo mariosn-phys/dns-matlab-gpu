@@ -22,7 +22,7 @@ subplot(221)
 
 %    [ez,inz]=max(trapz(z,Wyz_t.^2,3));
    
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz',arr)
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z/h','y/h','yz',arr)
                 title('$U(y,z,t)$','Interpreter','latex')
 
     subplot(223)
