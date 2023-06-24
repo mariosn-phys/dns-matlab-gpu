@@ -35,7 +35,7 @@ subplot(221)
     Wyz_t=wn(:,inx,:);
     
     
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z','y','yz',arr)
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'z/h','y/h','yz',arr)
             title(['$u(x=',num2str(x(inx),'%0.2f'),',y,z,t)$'],'Interpreter','latex')
 
     subplot(222)
@@ -45,8 +45,8 @@ subplot(221)
     Vyz_t=vn(:,:,inz);
     Wyz_t=wn(:,:,inz);
     
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','y','yx',arr)
-        title(['$w(x,y,z=',num2str(z(inz),'%0.2f'),')$'],'Interpreter','latex')
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x/h','y/h','yx',arr)
+        title(['$w(x,y,z=',num2str(z(inz),'%0.2f'),',t)$'],'Interpreter','latex')
 
     
         subplot(224)
@@ -57,5 +57,5 @@ subplot(221)
     Wyz_t=wn(iny,:,:);
     
     
-    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x','z','xz',arr)
-        title(['$v(x,y=',num2str(yE(iny),'%0.2f'),',w)$'],'Interpreter','latex')
+    plot_contour(Uyz_t,Vyz_t,Wyz_t,'x/h','z/h','xz',arr)
+        title(['$v(x,y=',num2str(yE(iny),'%0.2f'),',z,t)$'],'Interpreter','latex')
