@@ -3,18 +3,28 @@ function [adv_v,adv_g] = advect_NL_anl(up,vp,wp,gp,af)
 global N NX MZ
 
     %split 
-        uphat=fft(up,[],2);
-        vphat=fft(vp,[],2);
-        wphat=fft(wp,[],2);
     
-        U_RNL=0*up;U_RNL(:,1,:)=uphat(:,1,:);U_RNL=ifft(U_RNL,[],2);
-        V_RNL=0*vp;V_RNL(:,1,:)=vphat(:,1,:);V_RNL=ifft(V_RNL,[],2);
-        W_RNL=0*wp;W_RNL(:,1,:)=wphat(:,1,:);W_RNL=ifft(W_RNL,[],2);
-    
-        u_RNL=uphat;u_RNL(:,1,:)=0*u_RNL(:,1,:);u_RNL=ifft(u_RNL,[],2);
-        v_RNL=vphat;v_RNL(:,1,:)=0*v_RNL(:,1,:);v_RNL=ifft(v_RNL,[],2);
-        w_RNL=wphat;w_RNL(:,1,:)=0*w_RNL(:,1,:);w_RNL=ifft(w_RNL,[],2);
+%        uphat=fft(up,[],2);
+%        vphat=fft(vp,[],2);
+%        wphat=fft(wp,[],2);
+%    
+%        U_RNL=0*up;U_RNL(:,1,:)=uphat(:,1,:);U_RNL=ifft(U_RNL,[],2);
+%        V_RNL=0*vp;V_RNL(:,1,:)=vphat(:,1,:);V_RNL=ifft(V_RNL,[],2);
+%        W_RNL=0*wp;W_RNL(:,1,:)=wphat(:,1,:);W_RNL=ifft(W_RNL,[],2);
+%    
+%        u_RNL=uphat;u_RNL(:,1,:)=0*u_RNL(:,1,:);u_RNL=ifft(u_RNL,[],2);
+%        v_RNL=vphat;v_RNL(:,1,:)=0*v_RNL(:,1,:);v_RNL=ifft(v_RNL,[],2);
+%        w_RNL=wphat;w_RNL(:,1,:)=0*w_RNL(:,1,:);w_RNL=ifft(w_RNL,[],2);
+%
+%    replaced by
 
+    U_RNL=repmat(mean(up,2),[1 NX 1 1]);
+    V_RNL=repmat(mean(vp,2),[1 NX 1 1]);
+    W_RNL=repmat(mean(wp,2),[1 NX 1 1]);
+
+    u_RNL=up-U_RNL;
+    v_RNL=vp-V_RNL;
+    w_RNL=wp-W_RNL;
 
     dxdup=difX_F(u_RNL,1);
     dxdvp=difX_F(v_RNL,1);
