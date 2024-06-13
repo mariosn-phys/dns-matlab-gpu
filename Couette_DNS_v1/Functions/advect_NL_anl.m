@@ -18,9 +18,9 @@ global N NX MZ
 %
 %    replaced by
 
-    U_RNL=repmat(mean(up,2),[1 NX 1 1]);
-    V_RNL=repmat(mean(vp,2),[1 NX 1 1]);
-    W_RNL=repmat(mean(wp,2),[1 NX 1 1]);
+    U_RNL=repmat(mean(up,2),[1 NX 1]);
+    V_RNL=repmat(mean(vp,2),[1 NX 1]);
+    W_RNL=repmat(mean(wp,2),[1 NX 1]);
 
     u_RNL=up-U_RNL;
     v_RNL=vp-V_RNL;
